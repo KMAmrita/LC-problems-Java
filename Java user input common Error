@@ -1,9 +1,9 @@
-
+-------------------------------------------------------------------------------------------
 System.out.println("ent N");
- N = tc.nextInt();
+ N = tc.nextInt(); -- to get int input
  
 //add this below nextLine to prevent skipping of the consecutive nextLine
-tc.nextLine();
+tc.nextLine(); -- to get string input
  
 Scanner scan = new Scanner(System.in);
 
@@ -17,3 +17,34 @@ word1 = scan.nextLine();
 if(scan.hasNextLine()){
 word2= scan.nextLine();
 }
+
+-------------------------------------------to get user input and store in array that input length------------------------------------------------
+	private static Scanner scan;
+
+	public static void main(String args[]) throws Exception {
+		int n = 0, oTot = 0, eTot = 0, output = 0;
+		scan = new Scanner(System.in);
+		n = Integer.parseInt(scan.nextLine());
+
+		int[] arr = new int[n];
+		if(n<=100) { 
+			
+		for (int i = 0; i < n; i++) {
+
+			arr[i] = scan.nextInt();
+			
+			 if (arr[i] >0 && arr[i] % 2 == 0) {
+				eTot = eTot + arr[i];
+				
+			} else {
+				oTot = oTot + arr[i];
+				}
+		}
+		System.out.print(" even  T " +eTot + " odd T  " + oTot);
+		System.out.print("\n");
+		output = eTot - oTot;
+		System.out.print("ans "+ output);
+		}
+
+	}
+ -------------------------------------------------------------------------------------------
