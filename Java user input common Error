@@ -17,8 +17,8 @@ word1 = scan.nextLine();
 if(scan.hasNextLine()){
 word2= scan.nextLine();
 }
-
--------------------------------------------to get user input and store in array that input length------------------------------------------------
+r
+-------------------------------------------to get user input and store in array that input length-------------------------------------------------------------------
 	private static Scanner scan;
 
 	public static void main(String args[]) throws Exception {
@@ -47,4 +47,42 @@ word2= scan.nextLine();
 		}
 
 	}
- -------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------to get arr as input and split to other set of inputs length-----------------------------------------------------
+private static Scanner scan;
+
+public static void main(String args[] ) throws Exception{
+
+String input="", total="";
+int sum=0;
+
+String n=" ";
+scan = new Scanner(System.in);
+n=scan.nextLine();
+String[] tokens = n.split(" ");
+int input1= Integer.parseInt(tokens[0]);
+
+int total1= Integer.parseInt(tokens[1]);
+
+
+int[] arr = new int[input1];
+
+for(int i=0;i<input1;i++)
+{
+arr[i]= scan.nextInt();
+
+}
+
+Arrays.sort(arr);
+
+
+for(int i=0;i <input1;i++){
+	
+	
+sum=sum+arr[i];
+if(sum > total1)
+{System.out.print(i);}
+}
+
+}
+-----------------------------------------------------------------------------------------------------------------
