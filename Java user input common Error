@@ -17,7 +17,7 @@ word1 = scan.nextLine();
 if(scan.hasNextLine()){
 word2= scan.nextLine();
 }
-r
+
 -------------------------------------------to get user input and store in array that input length-------------------------------------------------------------------
 	private static Scanner scan;
 
