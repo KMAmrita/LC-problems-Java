@@ -1,4 +1,17 @@
--------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------compare each string from array of string -----------------------------------------------------------------
+        // compare each string from array of string 
+       for(String arr1 : arr){
+        int len = arr1.length();
+      
+        // compare each character from starting
+        // with its corresponding character from last
+        for (int i = 0; i < len/2; i++ )
+            if (arr1.charAt(i) != arr1.charAt(len-i-1))
+                return false;
+        }
+        
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 System.out.println("ent N");
  N = tc.nextInt(); -- to get int input
  
