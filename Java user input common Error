@@ -1,3 +1,10 @@
+-----------------------------------------------------------------------Time indent 00 to 0  in java  -  00: 05 -----------------------------------------------------------------------
+String T1 = String.format("%02d", tot1);
+		String T2 = String.format("%02d", tot2);
+
+		System.out.println( T1 + " "+ T2);
+
+
 
 -----------------------------------------------------------------------compare each string from array of string -----------------------------------------------------------------
         // compare each string from array of string 
