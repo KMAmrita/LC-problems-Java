@@ -1,0 +1,22 @@
+public class Solution {
+    public bool IsPalindrome(int x) {
+        
+         if (x < 0) {
+            return false;
+        }
+
+        // Store the original number to compare later
+        int originalNum = x;
+        int reversedNum = 0;
+
+        // Reverse the number
+        while (x > 0) {
+            int digit = x % 10; // Get the last digit
+            reversedNum = reversedNum * 10 + digit; // Add the digit to the reversed number
+            x /= 10; // Remove the last digit from x
+        }
+
+        // Compare the original number with its reversed version
+        return originalNum == reversedNum;
+    }
+}
