@@ -1,0 +1,61 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+//class LinkedNode{
+//
+//    int val;
+//    ListNode next;
+//
+//    void ListNode() {};
+//
+//    void ListNode(int val) {this.val = val;}
+//
+//    void ListNode(int val, ListNode next) {this.val = val; this.next = next;}
+//
+//}
+
+class SolutionLL {
+    public ListNode createLinkedList(int[] arr) {
+
+        if(arr.length==0) return null;
+
+        ListNode head = new ListNode(arr[0]);
+        ListNode current = head;
+        for(int i=1;i<arr.length;i++)
+        {
+            current.next = new ListNode(arr[i]);
+            current = current.next;
+        }
+
+    return head;
+
+    }
+
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("ent the number elements in the list");
+        int n =scanner.nextInt();
+
+        int[] arr = new int[n];
+        System.out.println("ent the  elements in the list");
+        for(int i=0;i<n;i++){
+        arr[i]= scanner.nextInt();
+        }
+        Arrays.sort(arr);
+        SolutionLL S = new SolutionLL();
+        ListNode head = S.createLinkedList(arr);
+        S.printlist(head);
+
+    }
+
+    private void printlist(ListNode head) {
+        ListNode current = head;
+        while(current!=null)
+        {
+            System.out.println(current.val + " -> ");
+            current = current.next;
+        }
+    }
+
+}
