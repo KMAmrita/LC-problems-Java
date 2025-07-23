@@ -1,0 +1,39 @@
+
+
+public class Singleton {
+
+    // Volatile keyword ensures that changes to the 'instance' variable are immediately visible to all threads.
+    private static volatile Singleton instance;
+
+    // Private constructor to prevent direct instantiation from outside the class.
+    private Singleton() {
+      // Optional: Add initialization logic here if needed.
+        // This constructor will be called only once.
+    }
+
+    // Public static method to get the single instance of the class.
+    public static Singleton getInstance() {
+        // Double-checked locking to ensure thread-safe lazy initialization.
+        if (instance == null) {
+            synchronized (Singleton.class) {
+                if (instance == null) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+
+    // Optional: Add other methods and fields to the Singleton class as needed.
+
+    public void showMessage() {
+        System.out.println("The Singleton instance implemented!");
+    }
+
+    public static void main(String[] args){
+        Singleton sg = Singleton.getInstance();
+        sg.showMessage();
+    }
+
+
+}
