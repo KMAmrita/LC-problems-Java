@@ -1,7 +1,14 @@
-class Solution {
-      public String toLowerCase(String s) 
-        {
-            s = s.toLowerCase();
-            return s ;
-        }
+public class toLower_709 {
+
+    // Static method to convert string to lowercase
+    public static String toLowerCase(String s) {
+        return s.toLowerCase();
     }
+
+    // Standard main method to run the program
+    public static void main(String[] args) {
+        String input = "HeLLo WOrLD!";
+        String output = toLowerCase(input);
+        System.out.println("Lowercase: " + output);
+    }
+}
